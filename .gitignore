@@ -1,0 +1,7 @@
+# Ficheiros locais do sistema
+Thumbs.db
+.DS_Store
+
+# Configuração local
+.env
+.env.local

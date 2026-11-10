@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100d19">
+<meta name="description" content="Tech SJM 2026, o portefólio de Calleb Bonfim, Camila Santos e Pedro Oliveira para a unidade Git e GitHub.">
+<title>Tech SJM ’26 — Portefólio da turma</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d9fa69'/%3E%3Cpath d='M25 20 13 32l12 12m14-24 12 12-12 12M36 17l-8 30' fill='none' stroke='%23100d19' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--bg:#100d19;--panel:#191525;--ink:#faf7f0;--soft:#c2bbcf;--lime:#d9fa69;--violet:#bda9ff;--line:#393145;--wide:1280px;--mono:ui-monospace,'Cascadia Code',Consolas,monospace;--sans:Inter,'Segoe UI',system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55}button,input,textarea,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--lime);outline-offset:5px}[hidden]{display:none!important}h1,h2,h3,p{margin:0}::selection{background:var(--lime);color:var(--bg)}.wrap{width:min(var(--wide),calc(100% - 96px));margin-inline:auto}.mono{font-family:var(--mono);letter-spacing:.11em;font-size:.72rem;text-transform:uppercase}.muted{color:var(--soft)}.skip{position:fixed;top:8px;left:8px;z-index:10;background:var(--lime);color:var(--bg);padding:10px;transform:translateY(-160%)}.skip:focus{transform:none}
+.bar{position:sticky;top:0;z-index:5;background:#100d19ed;backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}.progress{height:2px;background:var(--lime);position:absolute;bottom:-1px;left:0;width:100%;transform:scaleX(0);transform-origin:left;pointer-events:none}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:inline-flex;align-items:center;gap:11px;font-weight:850;white-space:nowrap;letter-spacing:-.04em;font-size:1.07rem}.brand span:first-child{display:grid;place-items:center;width:34px;height:34px;border-radius:8px;background:var(--lime);color:var(--bg);font:800 .88rem var(--mono);letter-spacing:-.1em}.brand i{color:var(--violet);font-style:normal}.navlinks{display:flex;align-items:center;gap:clamp(14px,2.5vw,34px);font-size:.84rem;color:var(--soft)}.navlinks a{padding-block:10px;white-space:nowrap}.navlinks a:hover,.navlinks a[aria-current]{color:var(--lime)}.menu{display:none}.btn{min-height:45px;display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:10px 17px;border-radius:7px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:.84rem;font-weight:700;transition:background .2s,color .2s,border-color .2s,transform .2s}.btn:hover{border-color:var(--violet);background:#bda9ff17;transform:translateY(-2px)}.btn.primary{background:var(--lime);border-color:var(--lime);color:#15141a}.btn.primary:hover{background:#edffad}.arrow{font-family:var(--mono);font-size:1.1em}.hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 75% 42%,#211538 0%,#100d19 59%)}.hero:before{content:'';position:absolute;inset:0;z-index:-1;background-image:linear-gradient(#aa94ce13 1px,transparent 1px),linear-gradient(90deg,#aa94ce13 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(90deg,transparent 12%,#000 64%,transparent)}.hero-grid{min-height:650px;display:grid;grid-template-columns:1fr .96fr;align-items:center;padding-block:68px;position:relative}.hero-copy{z-index:2;position:relative}.eyebrow{color:var(--violet);display:flex;align-items:center;gap:12px}.eyebrow:before{content:'';height:1px;width:25px;background:currentColor}.hero h1{font-size:clamp(5.4rem,12.2vw,11.45rem);line-height:.78;letter-spacing:-.11em;font-weight:920;margin:27px 0 32px;white-space:nowrap}.hero h1 span{display:block}.hero h1 em{font-style:normal;color:var(--lime);font-size:.65em;letter-spacing:-.105em;margin-left:.065em}.hero-copy>p{max-width:36ch;color:var(--soft);font-size:clamp(1rem,1.55vw,1.22rem)}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.hero-art{height:100%;min-height:445px;position:relative;display:grid;place-items:center}.hero-art:before{content:'';width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#8a48ea26,transparent 65%);position:absolute;pointer-events:none}.hero canvas{width:100%;height:100%;position:absolute;inset:0}.art-tag{position:absolute;right:0;bottom:4%;color:var(--soft);display:flex;gap:11px;align-items:center}.dot{width:7px;height:7px;border-radius:50%;display:inline-block;background:var(--lime);box-shadow:0 0 13px #d9fa6977}.coord{position:absolute;color:var(--violet);right:2%;top:7%}.side-index{position:absolute;left:0;bottom:4%;color:var(--soft)}
+.meta{border-bottom:1px solid var(--line);background:#15111f}.meta .wrap{display:grid;grid-template-columns:1.25fr 1fr 1fr}.meta div div{padding:18px 0;display:flex;gap:13px;align-items:center;justify-content:center;border-inline-start:1px solid var(--line)}.meta div div:first-child{justify-content:flex-start;border:0}.meta b{color:var(--lime);font-weight:500}.meta span{color:var(--soft)}.section{padding:106px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:1.12fr .68fr;gap:30px;align-items:end;margin-bottom:34px}.section-head p{max-width:41ch;color:var(--soft)}.section h2{font-size:clamp(3rem,7vw,6.4rem);line-height:.91;letter-spacing:-.085em;margin-top:15px;font-weight:870}.accent{color:var(--lime)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:19px}.chip{background:transparent;color:var(--soft);border:1px solid var(--line);padding:7px 13px;border-radius:999px;font-size:.8rem}.chip:hover{border-color:var(--violet);color:var(--ink)}.chip[aria-pressed=true]{background:var(--lime);border-color:var(--lime);color:var(--bg);font-weight:700}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{min-width:0;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:13px;overflow:hidden;background:var(--panel);transition:transform .25s,border-color .25s}.card:hover{transform:translateY(-5px);border-color:var(--violet)}.card-visual{height:clamp(142px,19vw,232px);display:grid;place-items:center;position:relative;overflow:hidden}.card-visual:before{content:'';position:absolute;inset:0;background-image:linear-gradient(currentColor 1px,transparent 1px),linear-gradient(90deg,currentColor 1px,transparent 1px);background-size:25px 25px;opacity:.12;mask-image:radial-gradient(ellipse,#000,transparent 78%)}.card-visual svg{width:68%;height:77%;max-width:250px;position:relative;transition:transform .45s cubic-bezier(.16,1,.3,1)}.card:hover svg{transform:scale(1.1) rotate(-3deg)}.violet{background:#292044;color:#c5aaff}.green{background:#232b1c;color:#d9fa69}.pink{background:#322039;color:#ffacd9}.vnum{position:absolute;top:15px;left:16px;color:inherit}.card-body{padding:22px;display:flex;flex:1;flex-direction:column;align-items:flex-start}.card h3{font-size:1.55rem;line-height:1.12;letter-spacing:-.045em;margin:8px 0 8px}.card p{font-size:.92rem;color:var(--soft);margin-bottom:19px}.linkbtn{background:none;border:0;padding:4px 0;color:var(--lime);font-size:.87rem;font-weight:750;margin-top:auto;text-align:left}.linkbtn:hover{text-decoration:underline;text-underline-offset:4px}
+.team-section{background:linear-gradient(125deg,#1b142d,#100d19 63%)}.person{padding:23px;min-height:214px;border:1px solid var(--line);background:#171122;border-radius:11px;position:relative;overflow:hidden}.person:after{content:attr(data-initials);font-family:var(--mono);position:absolute;top:-19px;right:-4px;font-size:7.5rem;line-height:1;color:#c2a4ff0b;pointer-events:none}.avatar{height:49px;width:49px;display:grid;place-items:center;border-radius:12px;background:#29203e;color:var(--violet);font:700 .93rem var(--mono);margin-bottom:30px}.person:nth-child(2) .avatar{background:#29301a;color:var(--lime)}.person:nth-child(3) .avatar{background:#38223b;color:#ffacd9}.person h3{font-size:1.44rem;letter-spacing:-.045em}.person p{color:var(--soft);margin-top:5px;font-size:.88rem}.curriculum{border-top:1px solid var(--line)}.curriculum details{border-bottom:1px solid var(--line)}.curriculum summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:65px 1fr 26px;align-items:center;gap:13px;padding:21px 8px;font-size:clamp(1.05rem,2.4vw,1.64rem);font-weight:730;letter-spacing:-.03em}.curriculum summary::-webkit-details-marker{display:none}.curriculum summary:hover,.curriculum details[open] summary{color:var(--lime)}.curriculum summary:after{content:'+';font:500 1.3rem var(--mono);text-align:center}.curriculum details[open] summary:after{content:'−'}.curriculum p{margin:0 34px 22px 86px;max-width:63ch;color:var(--soft)}.workflow-section{background:#141020}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid var(--line);background:var(--line);border-radius:12px;overflow:hidden}.step{padding:20px 19px 24px;background:#1b1528}.step b{color:var(--lime)}.step h3{margin:15px 0 5px;font-size:1.12rem}.step p{color:var(--soft);font-size:.87rem}.rubric{margin-top:19px;padding:12px 16px;border:1px solid var(--line);border-radius:8px}.rubric summary{cursor:pointer;font-weight:650}.rubric dl{margin:14px 0 4px;display:grid;grid-template-columns:1fr auto;gap:7px 16px;font-size:.86rem;color:var(--soft)}.rubric dd{margin:0;color:var(--lime);font-family:var(--mono)}.rubric p{margin:12px 0;color:var(--soft);font-size:.86rem}
+.contact-section{background:var(--lime);color:#141518}.contact-section .eyebrow{color:#35401b}.contact-section h2{max-width:11ch}.contact-section .section-head p{color:#30381b}.contact-section .btn{color:#171a10;border-color:#667334}.contact-section .btn:hover{background:#c3e653;border-color:#171a10}.contact-section .btn.primary{background:#15181a;color:var(--lime);border-color:#15181a}.contact-section .btn.primary:hover{background:#292f1c}.contact-section :focus-visible{outline-color:#15181a}.contact-section .actions{margin-top:0}.foot{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:28px;color:var(--soft);font-size:.82rem}.foot a:hover{color:var(--lime)}
+dialog{max-height:calc(100dvh - 28px);width:min(680px,calc(100% - 28px));color:var(--ink);background:#191425;border:1px solid #5a496e;border-radius:17px;padding:0;box-shadow:0 25px 100px #0009;overflow:auto}dialog::backdrop{background:#07050bd9;backdrop-filter:blur(7px)}.dialog-inner{padding:clamp(23px,5vw,48px)}.dialog-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.icon-btn{background:#231a31;color:var(--ink);border:1px solid var(--line);border-radius:50%;width:38px;height:38px;display:grid;place-items:center;font-size:1.2rem}.icon-btn:hover{border-color:var(--violet)}.dialog-inner h2{font-size:clamp(2.2rem,6vw,4rem);line-height:.99;letter-spacing:-.07em;margin-bottom:14px}.dialog-inner p{color:var(--soft)}.demo{border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:21px;background:#100d19}.demo .actions{margin-top:12px}.demo label,.contact-form label{display:block;font-weight:650;margin-bottom:7px}.demo input,.contact-form input,.contact-form textarea{width:100%;border:1px solid #625571;border-radius:6px;background:#1f172b;color:var(--ink);padding:9px 11px}.demo output{display:block;margin-top:14px;color:var(--lime);font-family:var(--mono);overflow-wrap:anywhere}.contact-form{display:grid;gap:12px;margin-top:20px}.contact-form textarea{resize:vertical;min-height:100px}.feedback{font-size:.86rem}.contact-section .feedback{margin-top:12px}.slide{min-height:216px;display:flex;justify-content:center;flex-direction:column}.slide p{max-width:48ch}.slide-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:22px}.slide-nav button:disabled{opacity:.4;cursor:default;transform:none}.reveal.ready{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .65s cubic-bezier(.16,1,.3,1)}.reveal.ready.in{opacity:1;transform:none}.intro{animation:enter .85s cubic-bezier(.16,1,.3,1) both}@keyframes enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1000px){.wrap{width:calc(100% - 58px)}.nav{gap:14px}.navlinks{gap:15px}.hero-grid{min-height:570px}.hero-art{min-height:370px}.section{padding-block:80px}.step{padding:16px}}
+@media(max-width:760px){.wrap{width:calc(100% - 36px)}.nav{min-height:62px}.menu{display:inline-flex}.nav>.present{display:none}.navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:#171121;border-bottom:1px solid var(--line);padding:10px 18px;flex-wrap:wrap;justify-content:center;gap:4px 18px}.navlinks.open{display:flex}.hero-grid{display:block;min-height:0;padding:58px 0 28px}.hero h1{font-size:clamp(4.7rem,15vw,7rem);margin:24px 0}.hero-art{min-height:0;height:clamp(255px,57vw,410px);margin-top:6px}.coord{top:11%}.side-index{display:none}.art-tag{bottom:1%}.meta .wrap{grid-template-columns:1fr 1fr}.meta div div{justify-content:flex-start;padding:10px 8px;gap:7px;font-size:.62rem;flex-wrap:wrap}.meta div div:first-child{padding-left:0}.meta div div:last-child{display:none}.section{padding-block:62px}.section-head{grid-template-columns:1fr;gap:14px;margin-bottom:23px}.cards{grid-template-columns:repeat(2,1fr);gap:12px}.card-body,.person{padding:16px}.flow{grid-template-columns:repeat(2,1fr)}.foot{align-items:flex-start}.curriculum summary{grid-template-columns:44px 1fr 24px}.curriculum p{margin-left:65px}}
+@media(max-width:475px){.cards{grid-template-columns:1fr}.card-visual{height:178px}.person{min-height:151px}.avatar{margin-bottom:16px}.foot{flex-wrap:wrap;gap:10px}.hero h1{font-size:clamp(3.75rem,15.6vw,5rem)}.meta .mono{letter-spacing:.055em}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal.ready{opacity:1;transform:none}}
+.orbit-toggle{position:absolute;left:0;bottom:2%;z-index:1;padding:6px 8px;color:var(--soft);border:1px solid var(--line);border-radius:5px;background:#100d19d9;letter-spacing:.04em;font-size:.68rem}.orbit-toggle:hover{color:var(--lime);border-color:var(--violet)}
+#presentation{width:min(960px,calc(100% - 28px));background:radial-gradient(ellipse at 100% 0,#38254f,#191425 61%)}#presentation .slide{min-height:clamp(190px,42vh,370px)}#presentation .slide h2{color:var(--lime);font-size:clamp(2.6rem,8vw,6rem)}#presentation .slide p{font-size:clamp(1rem,2vw,1.3rem)}.demo .btn:disabled{opacity:.65;cursor:default;transform:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#inicio">Saltar para o conteúdo</a>
+<header class="bar">
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="Tech SJM 2026, início"><span aria-hidden="true">&lt;/&gt;</span><span>TECH SJM<i> ’26</i></span></a>
+    <nav class="navlinks" id="navegacao" aria-label="Navegação principal">
+      <a href="#projetos">Projetos</a><a href="#equipa">Equipa</a><a href="#disciplinas">Disciplinas</a><a href="#workflow">Workflow</a><a href="#contactos">Contactos</a>
+    </nav>
+    <button type="button" class="btn menu" aria-controls="navegacao" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+    <button type="button" class="btn present" data-present><span aria-hidden="true">▶</span> Apresentar</button>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap hero-grid">
+      <div class="hero-copy intro">
+        <p class="mono eyebrow">Portefólio da turma · São João da Madeira</p>
+        <h1 id="titulo"><span>TECH</span><span>SJM<em> ’26</em></span></h1>
+        <p>Projeto final do curso Técnico/a Especialista em Tecnologias e Programação de Sistemas de Informação.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projetos">Explorar projetos <span class="arrow" aria-hidden="true">↘</span></a>
+          <button type="button" class="btn" data-present>Modo apresentação <span class="arrow" aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+      <div class="hero-art">
+        <canvas id="orbita" aria-hidden="true"></canvas><span class="coord mono" aria-hidden="true">FIG. 01 / ÓRBITA</span><span class="art-tag mono" aria-hidden="true"><i class="dot"></i> Tech SJM · 2026</span>
+        <button class="orbit-toggle mono" type="button" aria-label="Pausar animação da órbita" hidden>Ⅱ Pausar</button>
+      </div>
+    </div>
+  </section>
+  <aside class="meta" aria-label="Dados da unidade de formação">
+    <div class="wrap mono"><div><b>UC00617</b><span>Git e GitHub</span></div><div><b>Ação</b><span>25.0373</span></div><div><b>Formadora</b><span>Sara Monteiro</span></div></div>
+  </aside>
+  <section class="section" id="projetos">
+    <div class="wrap reveal">
+      <div class="section-head"><div><span class="eyebrow mono">01 / Portefólio</span><h2>Projetos<span class="accent">.</span></h2></div><p>Abre uma ficha para explorar o site ou experimentar uma das demonstrações de programação.</p></div>
+      <div class="filters" role="group" aria-label="Filtrar projetos"><button class="chip" type="button" data-filter="all" aria-pressed="true">Todos</button><button class="chip" type="button" data-filter="web" aria-pressed="false">Web</button><button class="chip" type="button" data-filter="git" aria-pressed="false">Git</button><button class="chip" type="button" data-filter="alg" aria-pressed="false">Algoritmos</button></div>
+      <div class="cards" id="project-cards">
+        <article class="card" data-category="web git">
+          <div class="card-visual violet"><span class="vnum mono">P.01</span><svg viewBox="0 0 240 150" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="2"><rect x="24" y="22" width="192" height="108" rx="9"/><path d="M24 44h192M36 33h4m6 0h4m6 0h4m19 61-14-13 14-13m30 0 14 13-14 13m-8-30-13 35M145 66h47m-47 16h34m-34 16h44" stroke-linecap="round"/><path d="M24 112h192" opacity=".45"/></g></svg></div>
+          <div class="card-body"><span class="mono muted">Web / Projeto final</span><h3>Tech SJM 2026</h3><p>O portefólio da turma, desenvolvido para a unidade Git e GitHub.</p><button class="linkbtn" type="button" data-project="website">Ver ficha <span aria-hidden="true">↗</span></button></div>
+        </article>
+        <article class="card" data-category="git">
+          <div class="card-visual green"><span class="vnum mono">P.02</span><svg viewBox="0 0 240 150" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M42 98h154M78 98c27 0 22-46 52-46h24c30 0 21 46 42 46"/><path d="M44 121h153M44 28h153" opacity=".34"/><g fill="#232b1c"><circle cx="42" cy="98" r="7"/><circle cx="78" cy="98" r="7"/><circle cx="132" cy="52" r="7"/><circle cx="154" cy="52" r="7"/><circle cx="196" cy="98" r="7"/></g></g></svg></div>
+          <div class="card-body"><span class="mono muted">Git / Demonstração</span><h3>Laboratório de branches</h3><p>Simula uma branch, abre um pull request e passa pela revisão até ao merge.</p><button class="linkbtn" type="button" data-project="git">Experimentar <span aria-hidden="true">↗</span></button></div>
+        </article>
+        <article class="card" data-category="alg">
+          <div class="card-visual pink"><span class="vnum mono">P.03</span><svg viewBox="0 0 240 150" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="2"><rect x="31" y="43" width="50" height="62" rx="9"/><rect x="95" y="43" width="50" height="62" rx="9"/><rect x="159" y="43" width="50" height="62" rx="9"/></g><g fill="currentColor" text-anchor="middle" font-family="monospace" font-size="35"><text x="56" y="86">1</text><text x="120" y="86">0</text><text x="184" y="86">1</text></g></svg></div>
+          <div class="card-body"><span class="mono muted">Algoritmos / Demonstração</span><h3>Descodificador binário</h3><p>Escreve uma sequência binária e vê o valor decimal e hexadecimal em tempo real.</p><button class="linkbtn" type="button" data-project="binary">Experimentar <span aria-hidden="true">↗</span></button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section team-section" id="equipa">
+    <div class="wrap reveal">
+      <div class="section-head"><div><span class="eyebrow mono">02 / Créditos</span><h2>A equipa<span class="accent">.</span></h2></div><p>Trabalho de grupo de três formandos do curso em São João da Madeira.</p></div>
+      <div class="cards">
+        <article class="person" data-initials="CB"><div class="avatar" aria-hidden="true">CB</div><h3>Calleb Bonfim</h3><p>Coautor do projeto</p></article>
+        <article class="person" data-initials="CS"><div class="avatar" aria-hidden="true">CS</div><h3>Camila Santos</h3><p>Coautora do projeto</p></article>
+        <article class="person" data-initials="PO"><div class="avatar" aria-hidden="true">PO</div><h3>Pedro Oliveira</h3><p>Coautor do projeto</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="disciplinas">
+    <div class="wrap reveal">
+      <div class="section-head"><div><span class="eyebrow mono">03 / Formação</span><h2>Disciplinas<span class="accent">.</span></h2></div><p>A unidade de formação do projeto e os temas de programação explorados no site.</p></div>
+      <div class="curriculum">
+        <details open><summary><span class="mono muted">01 / UC</span>Utilizar serviços Git e GitHub</summary><p>A UC00617, orientada pela formadora Sara Monteiro, abrange controlo de versões com Git, colaboração com branches e pull requests, revisão de código e publicação com GitHub Pages.</p></details>
+        <details><summary><span class="mono muted">02 / Web</span>Desenvolvimento web</summary><p>O site usa HTML para estruturar o conteúdo, CSS para criar uma interface responsiva e JavaScript para as demonstrações e o modo de apresentação.</p></details>
+        <details><summary><span class="mono muted">03 / Alg</span>Algoritmos e sistemas de numeração</summary><p>O descodificador lê uma sequência de zeros e uns e apresenta o mesmo valor em base decimal e hexadecimal.</p></details>
+      </div>
+    </div>
+  </section>
+  <section class="section workflow-section" id="workflow">
+    <div class="wrap reveal">
+      <div class="section-head"><div><span class="eyebrow mono">04 / Colaboração</span><h2>Workflow<span class="accent">.</span></h2></div><p>As etapas previstas no enunciado para trabalhar em equipa no repositório do projeto.</p></div>
+      <div class="flow">
+        <article class="step"><b class="mono">01 / Configurar</b><h3>Repositório</h3><p>O responsável cria o repositório público do grupo e configura a proteção da branch principal com uma aprovação obrigatória.</p></article>
+        <article class="step"><b class="mono">02 / Desenvolver</b><h3>Clone e commits</h3><p>Cada colega clona o repositório, trabalha na sua branch e regista as alterações em commits claros e específicos.</p></article>
+        <article class="step"><b class="mono">03 / Rever</b><h3>Pull requests</h3><p>Os colegas abrem pull requests, deixam comentários técnicos e integram as alterações após a aprovação.</p></article>
+        <article class="step"><b class="mono">04 / Publicar</b><h3>GitHub Pages</h3><p>O responsável ativa o GitHub Pages e a equipa confirma que o site funciona no endereço público.</p></article>
+      </div>
+      <details class="rubric"><summary>Critérios da avaliação · 20 valores</summary><dl><dt>Repositório público e GitHub Pages</dt><dd>4 valores</dd><dt>20 ou mais commits por aluno</dt><dd>5 valores</dd><dt>2 ou mais PRs aprovados e integrados por aluno</dt><dd>5 valores</dd><dt>Revisão com comentários técnicos úteis</dt><dd>4 valores</dd><dt>Defesa do projeto</dt><dd>2 valores</dd></dl><p>Divisão prevista no enunciado. Aluno 1: repositório, <code>index.txt</code> e Pages. Aluno 2: <code>projetos.txt</code> e <code>equipa.txt</code>. Aluno 3: <code>contactos.txt</code> e <code>disciplinas.txt</code>.</p></details>
+    </div>
+  </section>
+  <section class="section contact-section" id="contactos">
+    <div class="wrap reveal">
+      <div class="section-head"><div><span class="eyebrow mono">05 / Contactos</span><h2>Fala com a equipa.</h2></div><p>Para uma dúvida ou sugestão sobre o projeto, prepara a tua mensagem. Quando o site estiver publicado no GitHub Pages, podes também abrir o canal de discussão do repositório.</p></div>
+      <div class="actions"><button type="button" class="btn primary" id="contact-open">Preparar mensagem <span class="arrow" aria-hidden="true">↗</span></button><a class="btn" id="repo-contact" target="_blank" rel="noopener noreferrer" hidden>Contactar via GitHub <span class="arrow" aria-hidden="true">↗</span></a><button type="button" class="btn" id="copy-team">Copiar nomes da equipa</button></div>
+      <p class="feedback" id="contact-feedback" role="status"></p>
+    </div>
+  </section>
+</main>
+<footer class="wrap foot"><p>Tech SJM 2026 · Calleb Bonfim, Camila Santos e Pedro Oliveira</p><a href="#inicio">Voltar ao início <span aria-hidden="true">↑</span></a></footer>
+
+<dialog id="project-dialog" aria-labelledby="project-title"><div class="dialog-inner"><div class="dialog-top"><span id="project-label" class="mono eyebrow"></span><form method="dialog"><button class="icon-btn" aria-label="Fechar ficha">×</button></form></div><h2 id="project-title"></h2><p id="project-desc"></p><div id="project-demo"></div></div></dialog>
+<dialog id="presentation" aria-labelledby="slide-title"><div class="dialog-inner"><div class="dialog-top"><span class="mono eyebrow">Defesa do projeto</span><form method="dialog"><button class="icon-btn" aria-label="Fechar apresentação">×</button></form></div><div class="slide" aria-live="polite"><h2 id="slide-title"></h2><p id="slide-text"></p></div><div class="slide-nav"><button class="btn" id="prev-slide" type="button" aria-label="Slide anterior">←</button><span class="mono muted" id="slide-count"></span><button class="btn primary" id="next-slide" type="button" aria-label="Slide seguinte">→</button></div></div></dialog>
+<dialog id="contact-dialog" aria-labelledby="contact-title"><div class="dialog-inner"><div class="dialog-top"><span class="mono eyebrow">Contactos / Tech SJM</span><form method="dialog"><button class="icon-btn" aria-label="Fechar mensagem">×</button></form></div><h2 id="contact-title">Preparar mensagem</h2><p>Copia o texto para enviares pelo canal que usas para falar com o grupo.</p><form class="contact-form" id="contact-form"><div><label for="subject">Assunto</label><input id="subject" maxlength="100" required></div><div><label for="message">Mensagem</label><textarea id="message" maxlength="1200" required></textarea></div><div><button type="submit" class="btn primary">Copiar mensagem</button></div><p class="feedback" id="message-feedback" role="status"></p><textarea id="message-copy" aria-label="Mensagem pronta para copiar" readonly hidden></textarea></form></div></dialog>
+<script>
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const menu = $('.menu');
+  const nav = $('#navegacao');
+  function setMenu(open) {
+    menu.setAttribute('aria-expanded', String(open));
+    nav.classList.toggle('open', open);
+  }
+  menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+  const navLinks = $$('a', nav);
+  navLinks.forEach(link => link.addEventListener('click', () => {
+    if (menu.getAttribute('aria-expanded') !== 'true') return;
+    setMenu(false);
+    const destination = $(link.hash);
+    destination.tabIndex = -1;
+    destination.focus({ preventScroll: true });
+  }));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      menu.focus();
+    }
+  });
+  const progress = $('.progress');
+  const navSections = navLinks.map(link => $(link.hash));
+  let scrollQueued = false;
+  function updatePage() {
+    const end = document.documentElement.scrollHeight - innerHeight;
+    progress.style.transform = `scaleX(${end > 0 ? scrollY / end : 0})`;
+    let active = -1;
+    navSections.forEach((section, index) => {
+      if (section.getBoundingClientRect().top <= Math.min(155, innerHeight * .32)) active = index;
+    });
+    if (end > 0 && scrollY >= end - 2) active = navSections.length - 1;
+    navLinks.forEach((link, index) => {
+      if (index === active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    scrollQueued = false;
+  }
+  function queuePageUpdate() {
+    if (scrollQueued) return;
+    scrollQueued = true;
+    requestAnimationFrame(updatePage);
+  }
+  addEventListener('scroll', queuePageUpdate, { passive: true });
+  addEventListener('resize', queuePageUpdate);
+  updatePage();
+  if ('IntersectionObserver' in window && !reduced.matches) {
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
+    }), { rootMargin: '0px 0px -5% 0px' });
+    $$('.reveal').forEach(section => {
+      section.classList.add('ready');
+      observer.observe(section);
+    });
+  }
+
+  const filterButtons = $$('[data-filter]');
+  const cards = $$('#project-cards .card');
+  filterButtons.forEach(button => button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    cards.forEach(card => { card.hidden = filter !== 'all' && !card.dataset.category.split(' ').includes(filter); });
+    queuePageUpdate();
+  }));
+  $$('.curriculum details, .rubric').forEach(details => details.addEventListener('toggle', queuePageUpdate));
+
+  const projects = {
+    website: {
+      label: 'P.01 / Projeto final', title: 'Tech SJM 2026',
+      description: 'Portefólio da turma com projetos, equipa, disciplinas e contactos. O mesmo ficheiro reúne a interface, as ilustrações e as ferramentas de demonstração.',
+      markup: '<div class="demo"><p>Autores: Calleb Bonfim, Camila Santos e Pedro Oliveira.</p><div class="actions"><a class="btn primary" id="view-workflow" href="#workflow">Ver workflow do projeto ↘</a></div></div>'
+    },
+    git: {
+      label: 'P.02 / Demonstração', title: 'Laboratório de branches',
+      description: 'Acompanha o percurso de uma alteração até à branch principal. O laboratório simula as etapas de Git e GitHub no navegador.',
+      markup: '<div class="demo"><p>Avança passo a passo para integrares uma alteração na branch principal.</p><output id="git-log" aria-live="polite"></output><div class="actions"><button class="btn primary" id="git-next" type="button"></button><button class="btn" id="git-reset" type="button">Recomeçar</button></div></div>'
+    },
+    binary: {
+      label: 'P.03 / Demonstração', title: 'Descodificador binário',
+      description: 'Escreve até 32 algarismos binários. O resultado é atualizado enquanto escreves.',
+      markup: '<div class="demo"><label for="bits">Sequência binária</label><input id="bits" inputmode="numeric" maxlength="32" value="101101" autocomplete="off" spellcheck="false" aria-describedby="decoded"><output id="decoded" for="bits" aria-live="polite"></output></div>'
+    }
+  };
+  const projectDialog = $('#project-dialog');
+  const demo = $('#project-demo');
+  function setupGitDemo() {
+    const stages = [
+      ['main · sem alterações', 'Criar branch'],
+      ['git switch -c feat/portfolio', 'Registar commit'],
+      ['git commit -m "Adiciona secção de projetos"', 'Abrir pull request'],
+      ['PR #1 · feat/portfolio → main · em revisão', 'Aprovar alteração'],
+      ['PR #1 · aprovado por um colega', 'Integrar na main'],
+      ['PR #1 · integrado em main ✓', 'Concluído']
+    ];
+    const next = $('#git-next');
+    let step = 0;
+    function render() {
+      const [log, action] = stages[step];
+      $('#git-log').textContent = log;
+      next.textContent = action;
+      next.disabled = step === stages.length - 1;
+    }
+    next.addEventListener('click', () => { step++; render(); });
+    $('#git-reset').addEventListener('click', () => { step = 0; render(); });
+    render();
+  }
+  function setupBinaryDemo() {
+    const bits = $('#bits');
+    const decoded = $('#decoded');
+    function convert() {
+      const value = bits.value.trim();
+      const valid = /^[01]{1,32}$/.test(value);
+      bits.setAttribute('aria-invalid', String(Boolean(value) && !valid));
+      if (!valid) {
+        decoded.textContent = value ? 'Usa apenas 0 e 1.' : 'Escreve uma sequência para começar.';
+        return;
+      }
+      const number = parseInt(value, 2);
+      decoded.textContent = `Decimal: ${number} · Hexadecimal: 0x${number.toString(16).toUpperCase()}`;
+    }
+    bits.addEventListener('input', convert);
+    convert();
+  }
+  $$('[data-project]').forEach(button => button.addEventListener('click', () => {
+    const project = projects[button.dataset.project];
+    $('#project-label').textContent = project.label;
+    $('#project-title').textContent = project.title;
+    $('#project-desc').textContent = project.description;
+    demo.innerHTML = project.markup;
+    if (button.dataset.project === 'git') setupGitDemo();
+    if (button.dataset.project === 'binary') setupBinaryDemo();
+    $('#view-workflow')?.addEventListener('click', () => projectDialog.close());
+    projectDialog.showModal();
+  }));
+
+  const presentation = $('#presentation');
+  const slides = [
+    ['Tech SJM 2026', 'Calleb Bonfim, Camila Santos e Pedro Oliveira. Projeto final da UC00617, Utilizar serviços Git e GitHub.'],
+    ['O objetivo', 'Criar o portefólio da turma com as secções de projetos, equipa, disciplinas e contactos. A navegação funciona em computador e telemóvel.'],
+    ['A experiência', 'O laboratório de branches simula um pull request até ao merge. O descodificador demonstra a conversão de binário para decimal e hexadecimal.'],
+    ['A colaboração', 'O enunciado prevê trabalhar em branches, registar commits, abrir pull requests e pedir a revisão de um colega antes do merge.'],
+    ['A demonstração final', 'Na defesa, abre o site e mostra as interações. No GitHub, apresenta o endereço do Pages, o histórico de commits e os pull requests revistos pela equipa.']
+  ];
+  const previous = $('#prev-slide');
+  const nextSlide = $('#next-slide');
+  let slideIndex = 0;
+  function renderSlide() {
+    const [title, copy] = slides[slideIndex];
+    $('#slide-title').textContent = title;
+    $('#slide-text').textContent = copy;
+    $('#slide-count').textContent = `${slideIndex + 1} / ${slides.length}`;
+    previous.disabled = slideIndex === 0;
+    nextSlide.disabled = slideIndex === slides.length - 1;
+  }
+  function moveSlide(amount) {
+    slideIndex = Math.max(0, Math.min(slides.length - 1, slideIndex + amount));
+    renderSlide();
+  }
+  $$('[data-present]').forEach(button => button.addEventListener('click', () => {
+    slideIndex = 0;
+    renderSlide();
+    presentation.showModal();
+  }));
+  previous.addEventListener('click', () => moveSlide(-1));
+  nextSlide.addEventListener('click', () => moveSlide(1));
+  presentation.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      moveSlide(event.key === 'ArrowLeft' ? -1 : 1);
+    }
+  });
+
+  const contactDialog = $('#contact-dialog');
+  const contactOutput = $('#message-copy');
+  const messageFeedback = $('#message-feedback');
+  const contactFeedback = $('#contact-feedback');
+  $('#contact-open').addEventListener('click', () => {
+    messageFeedback.textContent = '';
+    contactOutput.hidden = true;
+    contactDialog.showModal();
+  });
+  async function copyText(value, container) {
+    try {
+      await navigator.clipboard.writeText(value);
+      return true;
+    } catch {
+      const field = document.createElement('textarea');
+      const previouslyFocused = document.activeElement;
+      field.value = value;
+      field.readOnly = true;
+      field.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+      container.append(field);
+      field.select();
+      try { return document.execCommand('copy'); }
+      catch { return false; }
+      finally { field.remove(); previouslyFocused?.focus(); }
+    }
+  }
+  $('#contact-form').addEventListener('submit', async event => {
+    event.preventDefault();
+    const subject = $('#subject').value.trim();
+    const message = $('#message').value.trim();
+    if (!subject || !message) {
+      messageFeedback.textContent = 'Preenche o assunto e a mensagem.';
+      return;
+    }
+    const value = `${subject}\n\n${message}`;
+    const copied = await copyText(value, contactDialog);
+    contactOutput.hidden = copied;
+    messageFeedback.textContent = copied ? 'Mensagem copiada.' : 'Seleciona o texto abaixo para o copiares manualmente.';
+    if (!copied) { contactOutput.value = value; contactOutput.focus(); contactOutput.select(); }
+  });
+  $('#copy-team').addEventListener('click', async () => {
+    const names = 'Calleb Bonfim, Camila Santos e Pedro Oliveira';
+    const copied = await copyText(names, document.body);
+    contactFeedback.textContent = copied ? 'Nomes da equipa copiados.' : names;
+  });
+  // Preencher quando existir um canal de contacto oficial. Exemplo: a página de Issues do repositório real.
+  const officialContactUrl = '';
+  if (officialContactUrl) {
+    const link = $('#repo-contact');
+    link.href = officialContactUrl;
+    link.hidden = false;
+  } else if (location.hostname.endsWith('.github.io')) {
+    const owner = location.hostname.split('.')[0];
+    const repo = location.pathname.split('/')[1];
+    if (/^turma-sjm-git-[\w.-]+$/i.test(repo)) {
+      const link = $('#repo-contact');
+      link.href = `https://github.com/${owner}/${repo}/issues`;
+      link.hidden = false;
+    }
+  }
+
+  // Órbita em perspetiva. A malha é desenhada localmente, sem texturas ou bibliotecas.
+  const canvas = $('#orbita');
+  const context = canvas.getContext('2d');
+  if (context) {
+    const TAU = Math.PI * 2;
+    const dots = [];
+    for (let lat = 1; lat < 32; lat++) {
+      const angle = Math.PI * lat / 32;
+      const sin = Math.sin(angle);
+      const count = Math.max(8, Math.round(80 * sin));
+      for (let lon = 0; lon < count; lon++) {
+        const phi = TAU * (lon + (lat % 2) * .5) / count;
+        dots.push([sin * Math.cos(phi), Math.cos(angle), sin * Math.sin(phi)]);
+      }
+    }
+    const rings = [-.36, -.18, .02].map((tilt, index) => Array.from({ length: 160 }, (_, n) => {
+      const theta = n / 160 * TAU;
+      const radius = 1.35 + index * .17;
+      return [radius * Math.cos(theta), radius * Math.sin(theta) * Math.sin(tilt), radius * Math.sin(theta) * Math.cos(tilt)];
+    }));
+    let width = 0, height = 0, x = 0, y = 0, targetX = 0, targetY = 0;
+    const orbitToggle = $('.orbit-toggle');
+    let inView = true, paused = false, frame = 0, phase = .76, lastTime = 0;
+    function resize() {
+      width = canvas.clientWidth;
+      height = canvas.clientHeight;
+      const ratio = Math.min(devicePixelRatio || 1, 2);
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+      draw();
+    }
+    function draw() {
+      context.clearRect(0, 0, width, height);
+      if (!width || !height) return;
+      const cx = width * .50, cy = height * .50;
+      const size = Math.min(width * .247, height * .296);
+      const yaw = phase + x * .27, pitch = -.35 + y * .19;
+      const cosY = Math.cos(yaw), sinY = Math.sin(yaw), cosP = Math.cos(pitch), sinP = Math.sin(pitch);
+      function project([a, b, c]) {
+        const px = a * cosY - c * sinY;
+        const z = a * sinY + c * cosY;
+        const py = b * cosP - z * sinP;
+        const pz = b * sinP + z * cosP;
+        const scale = size * 4.4 / (4.4 - pz);
+        return [cx + px * scale, cy + py * scale, pz];
+      }
+      const glow = context.createRadialGradient(cx, cy, 3, cx, cy, size * 1.7);
+      glow.addColorStop(0, '#7444c735');
+      glow.addColorStop(.65, '#6e45a018');
+      glow.addColorStop(1, '#6e45a000');
+      context.fillStyle = glow;
+      context.fillRect(0, 0, width, height);
+      context.strokeStyle = '#bda9ff30';
+      context.lineWidth = .7;
+      context.beginPath();
+      context.arc(cx, cy, size * 1.61, 0, TAU);
+      context.stroke();
+      context.beginPath();
+      context.moveTo(cx - size * 1.82, cy); context.lineTo(cx + size * 1.82, cy);
+      context.moveTo(cx, cy - size * 1.65); context.lineTo(cx, cy + size * 1.65);
+      context.stroke();
+      const paintRings = front => {
+        rings.forEach((ring, index) => {
+          context.strokeStyle = front ? ['#dbfa69d0', '#bda9ff9b', '#bda9ff69'][index] : '#a789ed4a';
+          context.lineWidth = index === 0 ? 1.25 : .8;
+          context.beginPath();
+          let previousPoint = project(ring.at(-1));
+          for (const dot of ring) {
+            const point = project(dot);
+            if ((point[2] >= 0) === front) {
+              context.moveTo(previousPoint[0], previousPoint[1]);
+              context.lineTo(point[0], point[1]);
+            }
+            previousPoint = point;
+          }
+          context.stroke();
+        });
+      };
+      paintRings(false);
+      for (const point of dots) {
+        const [px, py, depth] = project(point);
+        const bright = Math.max(0, depth);
+        const edge = .65 + bright * (size > 100 ? 1.6 : 1.15);
+        context.globalAlpha = depth < 0 ? .15 : .35 + bright * .59;
+        context.fillStyle = point[1] < -.52 && depth > .25 ? '#deff82' : '#ccb8ff';
+        context.fillRect(px - edge / 2, py - edge / 2, edge, edge);
+      }
+      context.globalAlpha = 1;
+      paintRings(true);
+      const marker = project(rings[0][Math.floor(phase * 39) % rings[0].length]);
+      context.fillStyle = '#e8ff98';
+      context.beginPath();
+      context.arc(marker[0], marker[1], 3.6, 0, TAU);
+      context.fill();
+    }
+    function tick(time) {
+      frame = 0;
+      const elapsed = lastTime ? Math.min(40, time - lastTime) : 0;
+      lastTime = time;
+      phase += elapsed * .00034;
+      x += (targetX - x) * .07;
+      y += (targetY - y) * .07;
+      draw();
+      schedule();
+    }
+    function schedule() {
+      if (!frame && inView && !paused && !document.hidden && !reduced.matches) frame = requestAnimationFrame(tick);
+    }
+    function syncMotion() {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      lastTime = 0;
+      schedule();
+    }
+    orbitToggle.hidden = reduced.matches;
+    orbitToggle.addEventListener('click', () => {
+      paused = !paused;
+      orbitToggle.textContent = paused ? '▶ Animar' : 'Ⅱ Pausar';
+      orbitToggle.setAttribute('aria-label', paused ? 'Retomar animação da órbita' : 'Pausar animação da órbita');
+      syncMotion();
+    });
+    if ('ResizeObserver' in window) new ResizeObserver(resize).observe(canvas);
+    else addEventListener('resize', resize);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; syncMotion(); }).observe(canvas);
+    }
+    $('.hero-grid').addEventListener('pointermove', event => {
+      if (event.pointerType === 'touch') return;
+      const bounds = event.currentTarget.getBoundingClientRect();
+      targetX = ((event.clientX - bounds.left) / bounds.width - .5) * 2;
+      targetY = ((event.clientY - bounds.top) / bounds.height - .5) * 2;
+    });
+    $('.hero-grid').addEventListener('pointerleave', () => { targetX = 0; targetY = 0; });
+    reduced.addEventListener('change', () => { orbitToggle.hidden = reduced.matches; syncMotion(); });
+    document.addEventListener('visibilitychange', syncMotion);
+    resize();
+    schedule();
+  }
+</script>
+</body>
+</html>
