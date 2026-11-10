@@ -16,3 +16,4 @@ O login já deixa entrar. Grande avanço.
 Apaguei código. O projeto melhorou. Ficámos todos confusos.
 O README agora explica como ligar a máquina
 Resolvi o conflito. O Git e eu continuamos amigos.
+Os testes passaram. Tirei print para ninguém duvidar.
