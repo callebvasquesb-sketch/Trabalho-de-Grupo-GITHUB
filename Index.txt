@@ -1,3 +1,4 @@
 Fala Galerinha :) 
 Corrigi um bug. Os outros pediram para ficar.
 Funcionava na minha máquina. Agora funciona na tua também.
+O botão finalmente faz aquilo que promete
