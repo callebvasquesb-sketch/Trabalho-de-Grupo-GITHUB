@@ -3,3 +3,4 @@ Corrigi um bug. Os outros pediram para ficar.
 Funcionava na minha máquina. Agora funciona na tua também.
 O botão finalmente faz aquilo que promete
 Só ia mudar uma linha. O Git discorda.
+O CSS e eu chegámos a um acordo
