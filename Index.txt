@@ -18,3 +18,4 @@ O README agora explica como ligar a máquina
 Resolvi o conflito. O Git e eu continuamos amigos.
 Os testes passaram. Tirei print para ninguém duvidar.
 O projeto já cabe no telemóvel sem fazer ginástica
+Último commit de hoje, segundo o meu eu de agora
