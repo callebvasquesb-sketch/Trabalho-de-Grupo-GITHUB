@@ -14,3 +14,4 @@ O loop infinito finalmente teve um fim
 Promovi uma gambiarra a solução oficial
 O login já deixa entrar. Grande avanço.
 Apaguei código. O projeto melhorou. Ficámos todos confusos.
+O README agora explica como ligar a máquina
