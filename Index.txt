@@ -7,3 +7,4 @@ O CSS e eu chegámos a um acordo
 O formulário aprendeu a dizer não
 Bug corrigido na base da conversa e de três cafés
 Troquei o código de emergência por código de expediente
+O código agora faz sentido até para mim
