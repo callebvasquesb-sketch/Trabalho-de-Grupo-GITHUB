@@ -12,3 +12,4 @@ Matei o bug. Ele tinha uma segunda fase.
 A base de dados voltou a falar comigo
 O loop infinito finalmente teve um fim
 Promovi uma gambiarra a solução oficial
+O login já deixa entrar. Grande avanço.
