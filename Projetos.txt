@@ -4,3 +4,4 @@ Temos que fazer sync changes depois de fazer commit.
 Criei a branch "camilinha"
 A branch principal chama-se main.
 Estou a aprender sql.
+Mais especificamente postgree sql.
