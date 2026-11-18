@@ -12,3 +12,4 @@ Matei o bug. Ele tinha uma segunda fase.
 FALAAA PAPAII
 Iniciei os commits
 Vejo que há um bug
+Vou tentar descobrir o bug
