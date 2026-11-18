@@ -15,3 +15,4 @@ Vejo que há um bug
 Vou tentar descobrir o bug
 Vou tentar descobrir mas nao esta facil
 Erro detetado na linha x
+Irei resolver depois do almoço
