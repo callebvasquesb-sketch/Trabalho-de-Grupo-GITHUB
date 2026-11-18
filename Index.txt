@@ -13,3 +13,4 @@ FALAAA PAPAII
 Iniciei os commits
 Vejo que há um bug
 Vou tentar descobrir o bug
+Vou tentar descobrir mas nao esta facil
