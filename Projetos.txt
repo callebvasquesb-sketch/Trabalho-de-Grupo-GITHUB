@@ -5,3 +5,4 @@ Criei a branch "camilinha"
 A branch principal chama-se main.
 Estou a aprender sql.
 Mais especificamente postgree sql.
+Estamos a trabalhar no VisualStudioCode.
