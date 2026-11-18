@@ -7,3 +7,4 @@ Estou a aprender sql.
 Mais especificamente postgree sql.
 Estamos a trabalhar no VisualStudioCode.
 Estou a gostar.
+Obrigada volte sempre.
