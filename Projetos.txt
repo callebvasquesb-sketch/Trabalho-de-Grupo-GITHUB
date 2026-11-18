@@ -1,2 +1,3 @@
 A iniciar novos commits.
 Já aprendi o que é um commit.
+Temos que fazer sync changes depois de fazer commit.
