@@ -1,1 +1,2 @@
 A iniciar novos commits.
+Já aprendi o que é um commit.
